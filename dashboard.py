@@ -241,10 +241,10 @@ with tab1:
     with col3:
         st.markdown("**🌤️ Weather Impact**")
         best_weather = filtered_df.groupby('weather_label')['cnt'].mean().idxmax()
-        weather_impact = (filtered_df[filtered_df['weather_label']=='Clear']['cnt'].mean() / 
-                         filtered_df[filtered_df['weather_label']=='Light Snow/Rain']['cnt'].mean())
-        st.write(f"• Best Weather: {best_weather}")
-        st.write(f"• Clear vs Rain: {weather_impact:.1f}x more")
+        weather_impact = (filtered_df[filtered_df['weather_label']=='Cerah']['cnt'].mean() / 
+                         filtered_df[filtered_df['weather_label']=='Hujan Ringan/Salju']['cnt'].mean())
+        st.write(f"• Cuaca Terbaik: {best_weather}")
+        st.write(f"• Cerah vs Hujan: {weather_impact:.1f}x more")
     
     st.markdown('</div>', unsafe_allow_html=True)
 
